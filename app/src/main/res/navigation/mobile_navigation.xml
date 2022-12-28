@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/home_to_audio"
+            app:destination="@id/audioFragment" />
+        <action
+            android:id="@+id/home_to_light"
+            app:destination="@id/lightFragment" />
+        <action
+            android:id="@+id/home_to_fan"
+            app:destination="@id/fanFragment" />
+        <action
+            android:id="@+id/home_to_power"
+            app:destination="@id/powerFragment" />
+        <action
+            android:id="@+id/home_to_camera"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/home_to_sensor"
+            app:destination="@id/sensorFragment" />
+        <action
+            android:id="@+id/home_to_status"
+            app:destination="@id/statusFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/audioFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.AudioFragment"
+        android:label="AudioFragment" />
+    <fragment
+        android:id="@+id/fanFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.FanFragment"
+        android:label="FanFragment" >
+        <action
+            android:id="@+id/fan_to_manual"
+            app:destination="@id/fanManualFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/lightFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.LightFragment"
+        android:label="LightFragment" >
+        <action
+            android:id="@+id/light_to_manual"
+            app:destination="@id/lightManualFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accelerometerFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.AccelerometerFragment"
+        android:label="AccelerometerFragment" />
+    <fragment
+        android:id="@+id/airFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.AirFragment"
+        android:label="AirFragment" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.CameraFragment"
+        android:label="CameraFragment" />
+    <fragment
+        android:id="@+id/fanManualFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.FanManualFragment"
+        android:label="FanManualFragment" />
+    <fragment
+        android:id="@+id/powerFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.PowerFragment"
+        android:label="PowerFragment" />
+    <fragment
+        android:id="@+id/lightManualFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.LightManualFragment"
+        android:label="LightManualFragment" />
+    <fragment
+        android:id="@+id/sensorFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.SensorFragment"
+        android:label="SensorFragment" >
+        <action
+            android:id="@+id/sensor_to_accelerometer"
+            app:destination="@id/accelerometerFragment" />
+        <action
+            android:id="@+id/sensor_to_air"
+            app:destination="@id/airFragment" />
+        <action
+            android:id="@+id/sensor_to_spo2"
+            app:destination="@id/SPO2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SPO2Fragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.SPO2Fragment"
+        android:label="SPO2Fragment" />
+    <fragment
+        android:id="@+id/statusFragment"
+        android:name="pk.mohammadadnan.esgsmartapp.ui.StatusFragment"
+        android:label="StatusFragment" />
+</navigation>
